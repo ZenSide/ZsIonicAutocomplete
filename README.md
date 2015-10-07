@@ -1,6 +1,16 @@
 # ZsIonicAutocomplete
 A simple and efficient autocomplete field to use with promise or static lists
 
+Installation with bower
+---
+    bower install zs-ionic-autocomplete --save
+
+    <script src="lib/zs-ionic-autocomplete/zs-ionic-autocomplete.js"></script>
+    
+    angular.module('myApp',['zs-ionic-autocomplete'])
+
+Using the directive
+---
 Use ionic-autocomplete attribute to the field which will launch autocomplete modal.
 
     <input ionic-autocomplete ng-model="country">
