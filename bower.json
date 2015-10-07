@@ -1,0 +1,30 @@
+{
+  "name": "ZsIonicAutocomplete",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ZenSide/ZsIonicAutocomplete",
+  "authors": [
+    "Nicolas Janel <janel.nicolas@zenside.fr>"
+  ],
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "description": "A simple autocomplete modal working efficiently with promise to display asynchronous or static lists with a search field",
+  "main": "zs-ionic-autocomplete.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "ionic",
+    "autocomplete",
+    "promise",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
