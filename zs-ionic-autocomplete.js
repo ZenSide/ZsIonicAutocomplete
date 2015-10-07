@@ -22,6 +22,7 @@ angular.module('zs-ionic-autocomplete', ['ionic'])
                 var scope;
 
                 element[0].style.cursor = 'pointer';
+                element[0].style.backgroundColor = 'transparent';
 
                 var tmpl = '<ion-modal-view class="zs-autocomplete">' +
                     '<ion-header-bar>' +
