@@ -1,0 +1,28 @@
+<ion-modal-view class="zs-autocomplete">
+    <ion-header-bar>
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="{{placeholder}}" class="input-field" ng-change="search()" ng-model="search.input">
+        </label>
+        <button class="button button-clear" ng-click="hide()">
+            {{ 'general.cancel' | translate }}
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list" ng-show="elts && elts.length > 0">
+            <a class="item" ng-repeat="elt in elts" ng-click="select(elt)">{{ eltValue(elt) }}</a>
+        </div>
+        <div class="card text-center" ng-show="loading && elts.length == 0">
+            <p class="item">
+                <ion-spinner icon="ripple"></ion-spinner>
+                <br>
+                {{ 'general.list.loading' | translate }}
+            </p>
+        </div>
+        <div class="card" ng-show="!loading && elts.length == 0">
+            <div class="item item-text-wrap">
+                {{ 'general.list.noResults' | translate }}
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>
