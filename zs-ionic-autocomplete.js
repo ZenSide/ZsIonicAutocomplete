@@ -68,6 +68,11 @@ angular.module('zs-ionic-autocomplete', ['ionic'])
 
                 scope.select = function (value) {
                     modelSetter($scope, value);
+                    if (attrs['ngChange']) {
+                        $timeout(function() {
+                            $parse(attrs['ngChange'])($scope);
+                        })
+                    }
                     modal.hide();
                 }
                 scope.loadElts = function () {
