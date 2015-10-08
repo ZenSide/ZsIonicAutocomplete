@@ -13,7 +13,7 @@ angular.module('zs-ionic-autocomplete', ['ionic'])
             }
         }
     })
-    .directive('ionicAutocomplete', function ($rootScope, $ionicModal, $filter, $parse) {
+    .directive('ionicAutocomplete', function ($rootScope, $ionicModal, $filter, $parse, $timeout) {
         return {
             restrict: 'AE',
             link: function ($scope, element, attrs) {
