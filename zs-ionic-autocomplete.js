@@ -36,7 +36,7 @@ angular.module('zs-ionic-autocomplete', ['ionic'])
                     '</ion-header-bar>' +
                     '<ion-content>' +
                     '<div class="list" ng-show="elts && elts.length > 0">' +
-                    '<a class="item" ng-repeat="elt in elts" ng-click="select(elt)">{{ eltValue(elt) }}</a>' +
+                    '<a class="item" ng-repeat="elt in elts" ng-click="select(elt)" ng-class="{separator:elt.separator}">{{ eltValue(elt) }}</a>' +
                     '</div>' +
                     '<div class="card text-center" ng-show="loading && elts.length == 0">' +
                     '<p class="item">' +
@@ -120,6 +120,8 @@ angular.module('zs-ionic-autocomplete', ['ionic'])
                     modal.remove();
                 });
                 element.on('click', function () {
+                    scope.search.input = '';
+                    scope.search();
                     modal.show().then(function () {
                         $(".input-field", modal.el)[0].focus();
                     });
